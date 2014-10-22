@@ -10,6 +10,7 @@
 #import "Obstacle.h"
 
 @implementation MainScene {
+    
     CCNode *_ground1;
     CCNode *_ground2;
     NSArray *_grounds;
