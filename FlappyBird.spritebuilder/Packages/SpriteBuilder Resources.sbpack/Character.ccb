@@ -315,17 +315,6 @@
 					<real>1</real>
 				</array>
 			</dict>
-			<dict>
-				<key>name</key>
-				<string>flip</string>
-				<key>type</key>
-				<string>Flip</string>
-				<key>value</key>
-				<array>
-					<true/>
-					<false/>
-				</array>
-			</dict>
 		</array>
 		<key>selected</key>
 		<true/>
@@ -386,7 +375,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
