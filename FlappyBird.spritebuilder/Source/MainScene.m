@@ -11,6 +11,12 @@
 
 @implementation MainScene {
     
+    CGPoint _cloudParallaxRatio;
+    CGPoint _bushParallaxRatio;
+    
+    CCNode *_parallaxContainer;
+    CCParallaxNode *_parallaxBackground;
+    
     CCNode *_ground1;
     CCNode *_ground2;
     NSArray *_grounds;
@@ -43,26 +49,6 @@
     _grounds = @[_ground1, _ground2];
     _clouds = @[_cloud1, _cloud2];
     _bushes = @[_bush1, _bush2];
-    //*********ADDED BELOW**************
-    _parallaxBackground = [CCParallaxNode node];
-    [_parallaxContainer addChild:_parallaxBackground];
-    
-    // Note that the bush ratio is larger than the cloud
-    _bushParallaxRatio = ccp(0.9, 1);
-    _cloudParallaxRatio = ccp(0.5, 1);
-    
-    for (CCNode *bush in _bushes) {
-        CGPoint offset = bush.position;
-        [self removeChild:bush];
-        [_parallaxBackground addChild:bush z:0 parallaxRatio:_bushParallaxRatio positionOffset:offset];
-    }
-    
-    for (CCNode *cloud in _clouds) {
-        CGPoint offset = cloud.position;
-        [self removeChild:cloud];
-        [_parallaxBackground addChild:cloud z:0 parallaxRatio:_cloudParallaxRatio positionOffset:offset];
-    }
-    //*********ADDED ABOVE**************
     
     for (CCNode *ground in _grounds) {
         // set collision txpe
