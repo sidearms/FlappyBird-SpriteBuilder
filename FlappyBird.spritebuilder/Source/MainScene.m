@@ -10,13 +10,6 @@
 #import "Obstacle.h"
 
 @implementation MainScene {
-    
-    CGPoint _cloudParallaxRatio;
-    CGPoint _bushParallaxRatio;
-    
-    CCNode *_parallaxContainer;
-    CCParallaxNode *_parallaxBackground;
-    
     CCNode *_ground1;
     CCNode *_ground2;
     NSArray *_grounds;
